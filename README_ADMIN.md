@@ -1,21 +1,22 @@
+########################################################
 symfony new adminapp
+
+http://192.168.91.11/MyAdminPanel/web/app_dev.php/book/
+
+php bin/console generate:bundle --namespace=Custom/BookBundle
+composer dump-autoload
+
+php bin/console generate:bundle --namespace=Custom/BookBundle
+php bin/console doctrine:generate:entity
+php bin/console doctrine:schema:update --force
+php bin/console generate:doctrine:crud
 
 Just chmod 777 on your app/cache and app/log directory.
 Better solutions are proposed on the doc here -> http://symfony.com/doc/current/setup/file_permissions.html
 
- Downloading Symfony...
+chmod -R 777 var/
 
-    5.8 MiB/5.8 MiB ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  100%
-
- Preparing project...
-
- ✕  Symfony 3.3.9 was successfully installed but your system doesn't meet its
-     technical requirements! Fix the following issues before executing
-     your Symfony application:
-
- * date.timezone setting must be set
-   > Set the "date.timezone" setting in php.ini* (like Europe/Paris).
-
+########################################################
  After fixing these issues, re-check Symfony requirements executing this command:
 
    php adminapp/bin/symfony_requirements
@@ -31,7 +32,6 @@ Better solutions are proposed on the doc here -> http://symfony.com/doc/current/
         2. Browse to the http://localhost:8000 URL.
 
     * Read the documentation at http://symfony.com/doc
-
 
 Just chmod 777 on your app/cache and app/log directory.
 Better solutions are proposed on the doc here -> http://symfony.com/doc/current/setup/file_permissions.html
